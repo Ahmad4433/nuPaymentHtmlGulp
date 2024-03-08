@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="light" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Update Profile | nuPayments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="Premium Multipurpose Admin & Dashboard Template"
+      name="description"
+    />
+
+    <meta content="Themesbrand" name="author" />
+
+      <!-- style for update user profile image -->
+        <link rel="stylesheet" href="../assets/styles/update-user-frofile.css" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/icons/nu-logo.png" />
+    <!-- pwa manifest -->
+    <link rel="manifest" href="assets/manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-128x128.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" href="assets/images/icons/icon-512x512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#d28fdb" />
+    <meta name="theme-color" content="#d28fdb" />
+
+
+    <!-- Layout config Js -->
+    <script src="assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="" />
+
+</head>
+
+    <body class="auth-bg 100-vh">
+        <div class="bg-overlay bg-light"></div>
+    
+        <div class="account-pages">
+<div class="toast-container position-absolute p-3 top-0 end-0">
+            <div  class="toast  fade  border-bottom border-primary overflow-hidden mt-3" id="alert-message" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 me-2">
+                            <i class="ri-user-smile-line align-middle"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0"></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-11">
+                        <div class="auth-full-page-content d-flex min-vh-100 py-sm-5 py-4">
+                            <div class="w-100">
+                                <div class="d-flex flex-column h-100 py-0 py-xl-4">
+    
+                                    <div class="text-center mb-5">
+                                        <a href="index.html">
+                                            <span class="logo-lg">
+                                                <img src="assets/icons/nu-payments.png" alt="" height="60">
+                                            </span>
+                                        </a>
+                                    </div>
+    
+                                    <div class="card my-auto overflow-hidden">
+                                            <div class="row g-0">
+                                                <div class="col-lg-6">
+                                                    <div class="p-lg-5 p-4">
+                                                        <div class="text-center">
+                                                            <h5 class="mb-0">Welcome Back !</h5>
+                                                            <p class="text-muted mt-2">Update your nuPayments Profile.</p>
+                                                        </div>
+                                                    
+                                                        <div class="mt-4">
+                                                            <form  class="auth-input" onsubmit="updateProfile(event)"  >
+
+
+                                                                <div class="mb-3 user-profile-update-main ">
+                                                                    <label for="email"  class="form-label"> Choice Profile Image</label>
+                                                                    <div class="user-update-profile-container" >
+                                                                        <img class="user-update-profile-view" alt="update profile" />
+                                                                    </div>
+                                                                    <input id="profile-img-file-input" type="file" class="profile-img-file-input update-profile-image " />
+
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <label for="email"  class="form-label">Email</label>
+                                                                    <input type="email" required class="form-control" id="update-email" placeholder="Enter email">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="username"  class="form-label">Username</label>
+                                                                    <input type="text" required class="form-control" id="username" placeholder="Enter username">
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <label for="bio"  class="form-label">Bio</label>
+                                                                    <input type="text" required class="form-control" id="bio" placeholder="Enter Bio">
+                                                                </div>
+
+                                                                <div class="mb-3">
+                                                                    <label for="website"  class="form-label">Website (Optional)</label>
+                                                                    <input type="text"  class="form-control" id="website" placeholder="Enter Website">
+                                                                </div>
+                                        
+                                                                
+                    
+                                                               
+                    
+                                                                <div class="mt-2">
+                                                                    <button class="btn btn-primary btn-load w-100" id="signup-btn" type="submit">Update Profile</button>
+                                                                    
+                                                                   
+                                                                </div>
+                                                               
+                    
+                    
+                                                                <!-- <div class="mt-4 text-center">
+                                                                    <p class="mb-0">Don't have an account ? <a href="auth-signup.html" class="fw-medium text-primary text-decoration-underline"> Signup now </a> </p>
+                                                                </div> -->
+                                                            </form>
+                                                        </div>
+                                    
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="col-lg-6">
+                                                    <div class="d-flex h-100 bg-auth align-items-end">
+                                                        <div class="p-lg-5 p-4">
+                                                            <div class="bg-overlay bg-primary"></div>
+                                                            <div class="p-0 p-sm-4 px-xl-0 py-5">
+                                                                <div id="reviewcarouselIndicators" class="carousel slide auth-carousel" data-bs-ride="carousel">
+                                                                    <div class="carousel-indicators carousel-indicators-rounded">
+
+                                                                
+                                                                    <!-- end carouselIndicators -->
+                                                                    <div class="carousel-inner mx-auto">
+                                                                        <div class="carousel-item active">
+                                                                            <div class="testi-contain text-center">
+                                                                                <h5 class="fs-20 text-white mb-0">“nuPayments accelerates your business”
+                                                                                </h5>
+                                                                                <p class="fs-15 text-white-50 mt-2 mb-0">nuPayments serves as a seamless connection to integrate your business into the digital realm of payments. Our solutions enable the adoption of a borderless business model, facilitating tools to help boost your business, increase revenue and business growth. Come, join the journey!</p>
+                                                                            </div>
+                                                                        </div>
+                        
+
+                                                                    </div>
+                                                                    <!-- end carousel-inner -->
+                                                                </div>
+                                                                <!-- end review carousel -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                        </div>
+                                    </div>
+                                    <!-- end card -->
+                                    
+                                    <div class="mt-5 text-center">
+                                        <p class="mb-0 text-muted">©
+                                            <script>document.write(new Date().getFullYear())</script> directoapp lnc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+
+    <!-- password-addon init -->
+
+    <script src="assets/js/pages/app-constants.js"></script>
+    <script src="assets/js/pages/auth.js"></script>
+    <script src="assets/dynamics/update-usee-profile-image/profileImage.js" ></script>
+    <script>
+        const email = document.getElementById('update-email')
+        const name = document.getElementById('username')
+        const bio = document.getElementById('bio')
+        const website = document.getElementById('website')
+        const imageView = document.querySelector('.user-update-profile-view')
+
+
+
+        const userBio = localStorage.getItem('bio')
+        const userWeb = localStorage.getItem('website')
+        const userName = localStorage.getItem('name')
+        const userEmail = localStorage.getItem('email')
+        const userFile = localStorage.getItem('file')
+        email.value = userEmail
+        name.value= userName
+        bio.value= userBio?userBio:''
+        website.value = userWeb? userWeb : ''
+
+        imageView.style.display= userFile ? 'block':'none'
+        imageView.src= userFile ? userFile:''
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+
+
+.user-profile-update-main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+
+.user-update-profile-container{
+    height: 220px;
+    width: 220px;
+    border: 1px dashed #c8c8c8;
+    border-radius: 50%;
+    font-weight: 600;
+
+}
+
+.user-update-profile-container:hover{
+    cursor: pointer;
+    box-shadow: 4px 6px 10px rgba(0,0,0,0.027);
+    transition: box-shadow 0.2s ;
+}
+
+.user-update-profile-view{
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    max-height: 100%;
+    border-radius: 50%;
+}
+.user-update-profile-view{
+    display: none;
+}
+
+.update-profile-image{
+    display: none;
+}
+
+.protected{
+    display: none;
+}
+
+#user-name-header{
+    text-transform: capitalize;
+
+}
+
+
+.invoice-logo-img {
+    height: 50px !important; 
+    width: 50px !important;
+}

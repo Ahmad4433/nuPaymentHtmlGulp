@@ -1,0 +1,1 @@
+BASE_URL="https://testapi.directoapp.com",local_local="http://localhost:8000/",live_live="https://newapp--4-f1f2be6aa8d1.herokuapp.com";
